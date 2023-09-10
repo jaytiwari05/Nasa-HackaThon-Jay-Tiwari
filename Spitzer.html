@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Design by foolishdeveloper.com -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSWT | Telescope Zoom</title>
+  <style>
+    body {
+  padding: 0px;
+  /* background-color: #97b8ed; */
+  background-image: url("myAssets/space.png");
+}
+
+.magnify {
+  position: absolute;
+transform: translate(-50%,-50%);
+top: 50%;
+left: 50%;
+  display: inline-block;
+}
+.magnify .magnified {
+  display: block;
+  z-index: 10;
+  margin: auto;
+  width: 600px;
+  height: 360px;
+  border: 5px solid #fff;
+}
+.magnify .magnifier {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  z-index: 20;
+  border: 4px solid white;
+  background-size: 1000%;
+  background-repeat: no-repeat;
+  margin-left: -100px !important;
+  margin-top: -100px !important;
+  pointer-events: none;
+}
+img{
+  width: 100%;
+  height:100%;
+}
+
+.jwst{
+    position: absolute;
+    width: 13%;
+    height: 20%;
+    top: 5%;
+    left: 20%;
+}
+.h2{
+    position: absolute;
+    top: 10%;
+    left: 36%;
+    color: white;
+}
+.blur{
+    filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+  </style>
+</head>
+<body>
+    <h2 class="h2">You Are Viewing From Splitzer Telescope Lens </h2>
+    <img src="jwstImgs/spitzer.png" class="jwst" alt="">
+  <div class="magnify">
+    <div class="magnifier" style="background-image:url(/jwstImgs/planets.jpeg);"></div>
+    <div class="magnified">
+       <img src="/jwstImgs/planets.jpeg" class="blur">
+    </div>
+  </div>
+  
+  <p class="output"></p>
+ 
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script>
+    $(".magnified").hover(function(e){
+  //Store position & dimension information of image
+  var imgPosition = $(".magnify").position(),
+      imgHeight = $(".magnified").height(),
+      imgWidth = $(".magnified").width();
+  
+  //Show mangifier on hover
+  $(".magnifier").show();
+  
+  //While the mouse is moving and over the image move the magnifier and magnified image
+  $(this).mousemove(function(e){
+    //Store position of mouse as it moves and calculate its position in percent
+    var posX = e.pageX - imgPosition.left,
+        posY = e.pageY - imgPosition.top,
+        percX = (posX / imgWidth) * 100,
+        percY = (posY / imgHeight) * 100,
+        perc = percX + "% " + percY + "%";
+    
+    //Change CSS of magnifier, move it to mouse location and change background position based on the percentages stored.
+    $(".magnifier").css({
+      top:posY,
+      left:posX,
+      backgroundPosition: perc
+    });
+  });
+}, function(){
+  //Hide the magnifier when mouse is no longer hovering over image.
+  $(".magnifier").hide();
+});
+  </script>
+</body>
+</html>

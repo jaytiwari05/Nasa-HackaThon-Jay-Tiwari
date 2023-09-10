@@ -1,0 +1,66 @@
+
+body{
+    background-image: url("myAssets/space.png");
+}
+.spitzer{
+    position: absolute;
+    width: 25%;
+    top: 30%;
+    left: 10%;
+}
+
+.jwst{
+    position: absolute;
+    width: 20%;
+    top: 26%;
+    left: 42%;
+}
+
+.normal{
+    position: absolute;
+    width: 13%;
+    top: 26%;
+    left: 72%;
+}
+
+.spitzer:hover{
+    width: 26%;
+    transition: width 1s ease;
+
+}
+
+.normal:hover{
+    width: 14%;
+    transition: width 1s ease;
+}
+
+.jwst:hover{
+    width: 21%;
+    transition: width 1s ease;
+}
+.teleH1{
+    position: absolute;
+    left: 30%;
+    top: 5%;
+    color: white;
+}
+.sph2{
+    position: absolute;
+    color: white;
+    top: 68%;
+    left: 15%;
+}
+
+.jwh2{
+    position: absolute;
+    color: white;
+    top: 68%;
+    left: 40%;
+}
+
+.noh2{
+    position: absolute;
+    color: white;
+    top: 68%;
+    left: 70%;
+}
