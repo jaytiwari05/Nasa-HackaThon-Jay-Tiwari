@@ -1,0 +1,112 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-image: url("myAssets/JwstPuzzle.jpeg");
+}
+
+
+.card {
+    width: 500px; 
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff;
+    padding: 15px;
+    transform: translateY(100%); 
+    transition: transform 0.3s ease; 
+}
+
+
+.card:hover .image img {
+    transform: scale(1.1); 
+}
+
+.card:hover .content {
+    transform: translateY(0);
+}
+
+.cardContainer{
+    display: flex;
+}
+
+.one{
+    padding: 20px;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+}
+
+.two {
+    padding: 20px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+}
+.two img{
+    width: 98%;
+}
+
+.c2one{
+    padding: 20px;
+    position: absolute;
+    top: 90%;
+    left: 10%;
+}
+ .c2one img{
+    width: 98%;
+ }
+.c2two {
+    padding: 20px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+}
+
+.bodyh1{
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.bodyp{
+    color: grey;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+
+
+.c3one{
+    padding: 20px;
+    position: absolute;
+    top: 165%;
+    left: 10%;
+}
+ .c3one img{
+    width: 98%;
+ }
+.c3two {
+    padding: 20px;
+    position: absolute;
+    top: 165%;
+    left: 50%;
+}

@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url("myAssets/space.png");
+}
+
+hr{
+    border: 0;
+    background-color: #2d0543;
+    height: 5px;
+    border-radius: 5px;
+    margin: 60px 80px;
+}
+
+.firstSection , .secondSection{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px 0;
+}
+.firstSection > div {
+    width: 30%;
+}
+
+.secondSection > div {
+    width: 30%;
+}
+.s1right , .s1left{
+    background-color: transparent;
+    color: white;
+    width: 50%;
+    font-size: 2.5rem;
+    margin: 50px 0;
+}
+.s2Right , .s2Left{
+    background-color: transparent;
+    color: white;
+    width: 50%;
+    font-size: 2.5rem;
+    margin: 50px 0;
+}
+
+.s1Jwst{
+    width: 25%;
+    border-radius: 20%;
+    position: absolute;
+    top: 10%;
+    left: 62%;
+}
+
+.s1Jwst:hover{
+    width: 25.5%;
+    transition: width 1s ease;
+}
+.jwstH2{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+}
+.jwstQuiz{
+    width: 25%;
+    height: 25%;
+    border-radius: 20%;
+    position: absolute;
+    top: 10%;
+    left: 12%;
+}
+.jwstQuiz:hover{
+    width: 25.5%;
+    height: 25.5%;
+    transition: width 1s ease;
+}
+.jwstQuizh2{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 22%;
+}
+
+.bigstar{
+    position: absolute;
+    width: 25%;
+    top: 60%;
+    left: 36%;
+}
+.bigstar:hover{
+    width: 25.5%;
+    transition: width 1s ease;
+}
+.zoomH2{
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 42%;
+}
+
+.rStraight{
+    position: absolute;
+    z-index: -2;
+    width: 25%;
+    left: 40%;
+    opacity: 0.6;
+}
+
