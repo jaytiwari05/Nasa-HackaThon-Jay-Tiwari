@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rotating Earth</title>
+</head>
+<body>
+    <canvas id="earthCanvas" width="400" height="400"></canvas>
+
+    <script>
+        // Get the canvas context and load the Earth image
+        const canvas = document.getElementById('earthCanvas');
+        const ctx = canvas.getContext('2d');
+        const earthImage = new Image();
+        earthImage.src = "myAssets/earth.png"; // Replace 'earth.jpg' with the path to your Earth image
+
+        // Define the rotation angle in radians (e.g., 45 degrees)
+        let rotationAngle = 0; // Initial rotation angle
+
+        // Function to draw and rotate the Earth image
+        function drawRotatingEarth() {
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Translate to the center of the canvas
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+
+            // Rotate by the specified angle
+            ctx.rotate(rotationAngle);
+
+            // Draw the Earth image (centered)
+            ctx.drawImage(earthImage, -earthImage.width / 2, -earthImage.height / 2);
+
+            // Reset transformations for the next frame
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+            // Increment the rotation angle for the next frame
+            rotationAngle += 0.01; // Adjust the rotation speed as needed
+
+            // Request the next frame
+            requestAnimationFrame(drawRotatingEarth);
+        }
+
+        // Start the animation
+        earthImage.onload = () => {
+            requestAnimationFrame(drawRotatingEarth);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.earth{
+    width: 33%;
+    height: 58%;
+    position: absolute;
+    top: 20%;
+    left: 32%;
+    z-index: 2;
+    transform: rotate(20deg);
+    background-image:url(myAssets/earthmap.jpeg) ;
+    border-radius: 50%;
+    background-size: 700px 100%;
+    box-shadow: inset 0px 10px 10px #FDFfF29E,
+                inset 0px 0px 30px black;
+    animation: rotate 10s infinite linear;
+  }
+  @keyframes rotate{
+    0%{
+        background-position-x: 0px ;
+    }
+    100%{
+        background-position-x: 800px ;
+    }
+  }
